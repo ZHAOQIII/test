@@ -1,0 +1,13 @@
+while True:
+    try:
+        nums_count = int(input())
+        nums = set()
+        for i in range(nums_count):
+            nums.add(int(input()))
+ 
+        nums = sorted(list(nums))
+        for each in nums:
+            print(each)
+ 
+    except:
+        break
