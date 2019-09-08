@@ -1,0 +1,5 @@
+a = input()
+b=input()
+a=a.lower()
+b=b.lower()
+print(a.count(b))
