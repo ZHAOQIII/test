@@ -1,0 +1,4 @@
+s=str(input())
+s=s.split()[-1]
+length= len(s)
+print(length)
