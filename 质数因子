@@ -1,0 +1,7 @@
+a = int(input())
+Outlist = []
+for i in range(2, a // 2 + 1):
+    while a % i == 0:
+        a = a / i
+        Outlist.append(i)
+print(" ".join(map(str, Outlist)) + " " if Outlist else str(a) + " ") 
