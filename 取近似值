@@ -1,0 +1,7 @@
+a = float(input())
+b=a-int(a)
+if b>=0.5:
+    c=int(a)+1
+else:
+    c=int(a)
+print(c)
