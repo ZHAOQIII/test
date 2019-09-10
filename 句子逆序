@@ -1,0 +1,7 @@
+a = input()
+b=a.split()
+c=b[::-1]
+result=''
+for i in c:
+    result=result+i+' '
+print(result)
