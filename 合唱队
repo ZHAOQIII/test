@@ -1,0 +1,29 @@
+#找出一个方向上的递增子序列长度
+def findAscSubString(peopleNum, heightList):
+    ascSubNum = [1] * peopleNum
+    for i in range(peopleNum):
+        if heightList[i] != min(heightList[:i + 1]):
+            for j in range(i):
+                if heightList[i] > heightList[j]:
+                    if ascSubNum[i] < ascSubNum[j] + 1:
+                        ascSubNum[i] = ascSubNum[j] + 1
+    return ascSubNum
+ 
+#得到去除的队员人数
+def findRemovePeople(peopleNum, heightList):
+    leftPeople = findAscSubString(peopleNum, heightList)          #左到右递增
+    rightPeople = findAscSubString(peopleNum, heightList[::-1])   #右到左递增
+    rightPeople.reverse()                                 #反转得到下标对应
+    stayPeople = 0
+    for i in range(peopleNum):
+        if stayPeople < leftPeople[i] + rightPeople[i]:
+            stayPeople = leftPeople[i] + rightPeople[i]
+    return peopleNum - stayPeople + 1
+ 
+while True:
+    try:
+        peopleNum = int(input())
+        heightList = list(map(int, input().split()))
+        print(findRemovePeople(peopleNum, heightList))
+    except Exception:
+        break
