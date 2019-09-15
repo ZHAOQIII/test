@@ -1,0 +1,16 @@
+while True:
+    try:
+        a=str(input())
+        c=''
+        min=len(a)
+        for i in a:
+            num=a.count(i)
+            if num<min:
+                min=num
+        for k in range (len(a)):
+            nums=a.count(a[k])
+            if nums!=min:
+                c+=a[k]
+        print(c)
+    except:
+        break
