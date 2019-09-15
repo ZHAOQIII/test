@@ -1,0 +1,28 @@
+import sys
+s = sys.stdin.readline()
+result = ''
+for i in range(len(s)):
+    if s[i] == 'Z':
+        result += 'a'
+    if s[i] >= 'A' and s[i] <'Z':
+        result += chr(ord(s[i].lower()) + 1)
+    if s[i] >= '0' and s[i] <= '9':
+        result += s[i]
+    if s[i] >= 'a' and s[i] <= 'c':
+        result += '2'
+    if s[i] >= 'd' and s[i] <= 'f':
+        result += '3'
+    if s[i] >= 'g' and s[i] <= 'i':
+        result += '4'
+    if s[i] >= 'j' and s[i] <= 'l':
+        result += '5'
+    if s[i] >= 'm' and s[i] <= 'o':
+        result += '6'
+    if s[i] >= 'p' and s[i] <= 's':
+        result += '7'
+    if s[i] >= 't' and s[i] <= 'v':
+        result += '8'
+    if s[i] >= 'w' and s[i] <= 'z':
+        result += '9'
+    
+print (result)
