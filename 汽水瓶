@@ -1,0 +1,17 @@
+while True:
+    try:
+        num=0
+        line = int(input())
+        if line:
+            while line>=3:
+                n=line//3
+                m=line%3
+                num=num+n
+                line=n+m
+            if line==2:
+                num=num+1
+            print(num)
+        else:
+            break
+    except:
+        break
